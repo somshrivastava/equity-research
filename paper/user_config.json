@@ -1,0 +1,38 @@
+{
+  "input_csv": "/var/folders/7l/k7w48ngj3_n_6snx56ybm1c80000gn/T/tmpziog9wt2/wrds_input.csv",
+  "fundamental_features": [
+    "revtq",
+    "cogsq",
+    "xsgaq",
+    "niq",
+    "chq",
+    "rectq",
+    "invtq",
+    "acoq",
+    "ppentq",
+    "aoq",
+    "dlcq",
+    "apq",
+    "txpq",
+    "lcoq",
+    "ltq"
+  ],
+  "momentum_features": [
+    "1 month",
+    "3 months",
+    "6 months",
+    "9 months"
+  ],
+  "batch_size": 256,
+  "learning_rate": 0.001,
+  "epochs": 200,
+  "patience": 25,
+  "alpha1_mlp": 0.75,
+  "alpha1_lstm": 0.5,
+  "portfolio_size": 5,
+  "start_capital": 100,
+  "start_date": "2005-01-01",
+  "model_type": "mlp",
+  "num_runs": 2,
+  "use_predicted_ebit": true
+}
