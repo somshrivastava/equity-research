@@ -1,0 +1,54 @@
+{
+  "description": "Default configuration for the Equity Research ML Pipeline",
+  "version": "1.0",
+
+  "data": {
+    "input_csv": "wrds_input.csv",
+    "start_date": "2005-01-01"
+  },
+
+  "features": {
+    "fundamental_features": [
+      "revtq",
+      "cogsq",
+      "xsgaq",
+      "niq",
+      "chq",
+      "rectq",
+      "invtq",
+      "acoq",
+      "ppentq",
+      "aoq",
+      "dlcq",
+      "apq",
+      "txpq",
+      "lcoq",
+      "ltq"
+    ],
+    "momentum_features": ["1 month", "3 months", "6 months", "9 months"]
+  },
+
+  "model_parameters": {
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "epochs": 200,
+    "patience": 25,
+    "alpha1_mlp": 0.75,
+    "alpha1_lstm": 0.5,
+    "model_type": "mlp"
+  },
+
+  "portfolio_parameters": {
+    "portfolio_size": 5,
+    "start_capital": 100,
+    "use_predicted_ebit": true
+  },
+
+  "experiment_parameters": {
+    "num_runs": 5
+  },
+
+  "session": {
+    "session_id": "default"
+  }
+}

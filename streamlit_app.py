@@ -158,9 +158,17 @@ if uploaded_file is not None:
                 st.rerun()
         else:
             if st.button("🚀 Start Pipeline", type="primary", use_container_width=True):
-                # Save config to session folder
+                # Save both config.json and user_config backup to session folder
+                session_dir = os.path.dirname(get_config_path(session_id))
+                
+                # Save as config.json (main config file)
                 config_path = get_config_path(session_id)
                 with open(config_path, 'w') as f:
+                    json.dump(config, f, indent=2)
+                    
+                # Also save as user_config backup in session folder
+                user_config_path = os.path.join(session_dir, f"user_config_{session_id}.json")
+                with open(user_config_path, 'w') as f:
                     json.dump(config, f, indent=2)
                 
                 # Set running state
