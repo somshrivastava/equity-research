@@ -1,0 +1,8 @@
+
+
+services:
+	- type: web
+		name: equity-research-streamlit
+		runtime: python
+		buildCommand: pip install -r requirements.txt
+		startCommand: streamlit run streamlit_app.py --server.port $PORT
