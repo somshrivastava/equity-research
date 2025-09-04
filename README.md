@@ -1,8 +1,8 @@
-# 📈 Equity Research ML Pipeline
+# Equity Research ML Pipeline
 
 A comprehensive machine learning pipeline for equity research and portfolio optimization using fundamental analysis and momentum indicators. This tool predicts EBIT values using neural networks and constructs optimized portfolios based on EBIT/Enterprise Value ratios.
 
-## 🚀 Features
+## Features
 
 - **Machine Learning Models**: MLP and LSTM neural networks for EBIT prediction
 - **Fundamental Analysis**: Processes WRDS financial data with 15+ fundamental features
@@ -13,7 +13,7 @@ A comprehensive machine learning pipeline for equity research and portfolio opti
 - **Session Management**: Organized data storage with run tracking
 - **Multiple Runs**: Statistical significance through repeated experiments
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Data Pipeline Flow:
@@ -30,7 +30,7 @@ Portfolio Selection → Performance Simulation → Results Analysis
 - **`simulate.py`**: Portfolio performance backtesting
 - **`config.py`**: Centralized configuration management
 
-## 📊 Data Requirements
+## Data Requirements
 
 ### Input Data Format (CSV)
 
@@ -61,7 +61,7 @@ Your WRDS dataset should include these columns:
 - `mkvaltq`: Market value
 - `ebit_raw`: Actual EBIT values (for training)
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 
@@ -104,7 +104,7 @@ scikit-learn>=1.3.0
 
 4. **Upload your WRDS dataset** and configure parameters through the web UI
 
-## ⚙️ Configuration
+## Configuration
 
 ### Model Parameters
 
@@ -124,7 +124,7 @@ scikit-learn>=1.3.0
 - **Number of Runs**: Statistical robustness through multiple experiments
 - **Date Range**: Backtesting period configuration
 
-## 📁 Data Organization
+## Data Organization
 
 The system automatically organizes all outputs in a clean folder structure:
 
@@ -156,7 +156,7 @@ equity-research/
 └── default_configuration.json    # Default parameters
 ```
 
-## 🔬 Methodology
+## Methodology
 
 ### Feature Engineering
 
@@ -191,7 +191,7 @@ equity-research/
 3. Configure model and portfolio parameters
 4. Run experiments and view results
 
-## 📈 Output Analysis
+## Output Analysis
 
 ### Key Metrics
 
@@ -209,6 +209,6 @@ The Streamlit interface provides:
 - Multi-run statistical analysis
 - Configuration management tools
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
