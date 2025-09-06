@@ -28,10 +28,24 @@ if 'session_id' not in st.session_state:
     st.session_state.session_id = f"{date_str}_{random_hash}"
 
 session_id = st.session_state.session_id
+
 st.sidebar.info(f"🔖 Session: {session_id}")  # Show full readable session name
 
 # Sidebar for parameters
 st.sidebar.header("Configuration")
+
+# Add download button for sample WRDS file
+sample_file_path = os.path.join(os.getcwd(), "sample_input_test_files", "wrds.csv")
+if os.path.exists(sample_file_path):
+    with open(sample_file_path, "rb") as f:
+        sample_bytes = f.read()
+    st.sidebar.download_button(
+        label="Download Sample WRDS CSV",
+        data=sample_bytes,
+        file_name="wrds_sample.csv",
+        mime="text/csv",
+        help="Download a sample WRDS CSV file if you don't have your own data."
+    )
 
 # File upload
 uploaded_file = st.sidebar.file_uploader(

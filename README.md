@@ -1,6 +1,7 @@
 ## Live App
 
 Access the deployed app here: [https://equity-research-screener.onrender.com/](https://equity-research-screener.onrender.com/)
+
 # Equity Research ML Pipeline
 
 A comprehensive machine learning pipeline for equity research and portfolio optimization using fundamental analysis and momentum indicators. This tool predicts EBIT values using neural networks and constructs optimized portfolios based on EBIT/Enterprise Value ratios.
